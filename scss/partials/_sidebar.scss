@@ -1,0 +1,326 @@
+// ============================================================
+// SIDEBAR MENU (izquierdo) — ExcelPro Templates
+// Metodología BEM | Flexbox | Sin floats
+// Requisito 1 EBAC: Menú lateral izquierdo con ícono X de cierre
+// ============================================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: 100vh;
+  z-index: $z-sidebar;
+  background: $color-white;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform $transition-slow;
+  box-shadow: $shadow-2xl;
+  overflow: hidden;
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  // Cabecera del sidebar
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-lg $spacing-lg $spacing-md;
+    border-bottom: 1px solid $color-light-gray;
+    flex-shrink: 0;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    text-decoration: none;
+  }
+
+  &__brand-icon {
+    width: 34px;
+    height: 34px;
+    background: $gradient-primary;
+    border-radius: $border-radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-pink;
+
+    svg { width: 18px; height: 18px; color: $color-white; }
+  }
+
+  &__brand-name {
+    font-family: $font-primary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+  }
+
+  // Botón cerrar con ícono X (Requisito 1 EBAC)
+  &__close {
+    width: 34px;
+    height: 34px;
+    border-radius: $border-radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-dark-gray;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    svg { width: 18px; height: 18px; }
+
+    &:hover {
+      background: $color-primary-xlight;
+      color: $color-primary;
+      transform: rotate(90deg);
+    }
+  }
+
+  // Perfil de usuario
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    background: $gradient-hero;
+    border-bottom: 1px solid $color-light-gray;
+    flex-shrink: 0;
+  }
+
+  &__profile-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: $border-radius-full;
+    background: $gradient-primary;
+    color: $color-white;
+    font-family: $font-primary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: $shadow-pink;
+  }
+
+  &__profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__profile-name {
+    font-family: $font-secondary;
+    font-weight: $font-weight-semibold;
+    color: $color-dark;
+    font-size: $font-size-sm;
+  }
+
+  &__profile-subtitle {
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    color: $color-gray;
+  }
+
+  // Área de navegación scrollable
+  &__nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: $spacing-md 0;
+
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb {
+      background: $color-border;
+      border-radius: $border-radius-full;
+    }
+  }
+
+  &__nav-section {
+    padding: 0 $spacing-md;
+    margin-bottom: $spacing-md;
+  }
+
+  &__nav-section-title {
+    font-family: $font-secondary;
+    font-size: 10px;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: $color-gray;
+    padding: 0 $spacing-sm $spacing-sm;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__nav-item {
+    display: flex;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: 10px $spacing-sm;
+    border-radius: $border-radius-md;
+    color: $color-dark-gray;
+    font-family: $font-secondary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    transition: all $transition-base;
+    width: 100%;
+
+    &:hover,
+    &--active {
+      background: $color-primary-xlight;
+      color: $color-primary;
+
+      .sidebar__nav-icon {
+        background: rgba($color-primary, 0.15);
+        color: $color-primary;
+      }
+
+      .sidebar__nav-arrow {
+        opacity: 1;
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &__nav-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: $border-radius-sm;
+    background: $color-light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all $transition-base;
+
+    svg { width: 15px; height: 15px; }
+  }
+
+  &__nav-label {
+    flex: 1;
+  }
+
+  &__nav-badge {
+    @include badge($color-secondary, $color-white);
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  &__nav-arrow {
+    width: 14px;
+    height: 14px;
+    opacity: 0.4;
+    transition: all $transition-base;
+    flex-shrink: 0;
+  }
+
+  &__divider {
+    height: 1px;
+    background: $color-light-gray;
+    margin: $spacing-sm $spacing-lg;
+  }
+
+  // Sección de categorías (filtros rápidos)
+  &__categories {
+    padding: $spacing-md $spacing-lg;
+    border-top: 1px solid $color-light-gray;
+    flex-shrink: 0;
+  }
+
+  &__categories-title {
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-gray;
+    margin: 0 0 $spacing-sm;
+  }
+
+  &__category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+  }
+
+  &__category-tag {
+    padding: 5px 12px;
+    border-radius: $border-radius-full;
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    background: $color-light-gray;
+    color: $color-dark-gray;
+    cursor: pointer;
+    transition: all $transition-base;
+    border: 1.5px solid transparent;
+
+    &:hover {
+      background: $color-primary-xlight;
+      color: $color-primary;
+      border-color: $color-primary-light;
+    }
+
+    &--active {
+      background: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+      box-shadow: $shadow-pink;
+    }
+  }
+
+  // Footer del sidebar
+  &__footer {
+    padding: $spacing-md $spacing-lg;
+    border-top: 1px solid $color-light-gray;
+    flex-shrink: 0;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__social-link {
+    width: 32px;
+    height: 32px;
+    border-radius: $border-radius-md;
+    background: $color-light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-dark-gray;
+    text-decoration: none;
+    transition: all $transition-base;
+
+    svg { width: 15px; height: 15px; }
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__footer-copyright {
+    font-family: $font-secondary;
+    font-size: $font-size-xs;
+    color: $color-gray;
+  }
+}

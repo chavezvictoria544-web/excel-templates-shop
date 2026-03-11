@@ -1,0 +1,22 @@
+// ============================================
+// MAIN SCSS - ExcelPro Templates
+// Estructura de forwards (Sass 7-1 pattern)
+// ============================================
+
+// 1. Abstracts (variables, mixins, funciones)
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+
+// 2. Base (reset, tipografía base)
+@use 'partials/reset' as *;
+
+// 3. Layout (header, sidebar, cart)
+@use 'partials/header' as *;
+@use 'partials/sidebar' as *;
+@use 'partials/cart' as *;
+
+// 4. Sections (hero, productos, footer)
+@use 'partials/sections' as *;
+
+// 5. Components (toast, modal, botones)
+@use 'partials/components' as *;

@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ExcelPro Templates — Las mejores plantillas de Excel para optimizar tu trabajo y tu negocio. Finanzas, ventas, RRHH y más." />
+  <title>ExcelPro Templates — Plantillas de Excel Profesionales</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+
+  <!-- CSS compilado desde SCSS -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+         <!-- BANNER PROMOCIONAL-->
+
+  <aside class="promo-banner" role="banner" aria-label="Oferta especial">
+    <p class="promo-banner__text">
+      <span class="promo-banner__emoji">🎉</span>
+      ¡Oferta de lanzamiento! 30% de descuento en todos los templates premium.
+      <a href="#products" class="promo-banner__link">Ver ofertas</a>
+    </p>
+    <button class="promo-banner__close" aria-label="Cerrar banner promocional" id="js-promo-close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="header" id="js-header" role="banner">
+    <div class="header__container">
+
+      <!-- Botón hamburguesa izquierdo — abre el sidebar (Requisito 1 EBAC) -->
+      <button
+        class="header__menu-btn"
+        id="js-sidebar-open"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="js-sidebar"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="header__logo" aria-label="ExcelPro Templates — Inicio">
+        <span class="header__logo-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+        </span>
+        <span class="header__logo-text">
+          ExcelPro
+          <span class="header__logo-text--light">Templates</span>
+        </span>
+      </a>
+
+      <!-- Navegación principal -->
+      <nav class="header__nav" aria-label="Navegación principal">
+        <ul class="header__nav-list" role="list">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link header__nav-link--active" aria-current="page">Inicio</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#categories" class="header__nav-link">Plantillas Gratis</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#products" class="header__nav-link">Súper Templates</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#testimonials" class="header__nav-link">Testimonios</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Acciones del header -->
+      <div class="header__actions">
+
+        <!-- Botón de búsqueda -->
+        <button
+          class="header__action-btn"
+          id="js-search-open"
+          aria-label="Abrir búsqueda"
+          aria-expanded="false"
+          aria-controls="js-search-bar"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.35-4.35"/>
+          </svg>
+        </button>
+
+        <!-- Botón del carrito con badge (Requisito 3 EBAC) -->
+        <button
+          class="header__cart-btn"
+          id="js-cart-open"
+          aria-label="Abrir carrito de compras"
+          aria-expanded="false"
+          aria-controls="js-cart-sidebar"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <!-- Badge numérico (Requisito 3 EBAC) -->
+          <span
+            class="header__cart-badge"
+            id="js-cart-badge"
+            aria-label="Productos en el carrito"
+            aria-live="polite"
+          >0</span>
+        </button>
+
+        <!-- CTA "Mi Libro" -->
+        <a href="#" class="header__cta-btn" aria-label="Ver mi libro de Excel">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+          </svg>
+          Mi Libro
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE BÚSQUEDA-->
+  <div
+    class="search-bar"
+    id="js-search-bar"
+    role="search"
+    aria-label="Buscar plantillas"
+    aria-hidden="true"
+  >
+    <div class="search-bar__inner">
+      <svg class="search-bar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <label for="js-search-input" class="sr-only">Buscar plantillas de Excel</label>
+      <input
+        class="search-bar__input"
+        type="search"
+        id="js-search-input"
+        placeholder="Buscar plantillas de Excel..."
+        autocomplete="off"
+        aria-label="Buscar plantillas"
+      />
+      <button class="search-bar__close" id="js-search-close" aria-label="Cerrar búsqueda">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- OVERLAY (para sidebar y carrito) -->
+  <div class="overlay" id="js-overlay" aria-hidden="true"></div>
+
+  <!-- SIDEBAR — MENÚ LATERAL IZQUIERDO (Requisito 1 EBAC)-->
+  <aside
+    class="sidebar"
+    id="js-sidebar"
+    role="navigation"
+    aria-label="Menú lateral de navegación"
+    aria-hidden="true"
+  >
+    <!-- Cabecera del sidebar -->
+    <header class="sidebar__header">
+      <a href="#" class="sidebar__brand" aria-label="ExcelPro Templates — Inicio">
+        <span class="sidebar__brand-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+        </span>
+        <span class="sidebar__brand-name">ExcelPro</span>
+      </a>
+
+      <!-- Botón cerrar con ícono X (Requisito 1 EBAC) -->
+      <button
+        class="sidebar__close"
+        id="js-sidebar-close"
+        aria-label="Cerrar menú de navegación"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Perfil de usuario -->
+    <div class="sidebar__profile" aria-label="Perfil de usuario">
+      <div class="sidebar__profile-avatar" aria-hidden="true">A</div>
+      <div class="sidebar__profile-info">
+        <p class="sidebar__profile-name">Arianna Zorrilla</p>
+        <p class="sidebar__profile-subtitle">Experta en Excel</p>
+      </div>
+    </div>
+
+    <!-- Navegación del sidebar -->
+    <nav class="sidebar__nav" aria-label="Menú lateral">
+
+      <section class="sidebar__nav-section">
+        <h3 class="sidebar__nav-section-title">Principal</h3>
+        <ul role="list">
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link sidebar__nav-link--active" aria-current="page">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Inicio</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#categories" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Plantillas Gratis</span>
+              <span class="sidebar__nav-badge">5</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#products" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18M9 21V9"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Súper Templates</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#testimonials" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Testimonios</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="sidebar__divider" role="separator"></div>
+
+      <section class="sidebar__nav-section">
+        <h3 class="sidebar__nav-section-title">Cuenta</h3>
+        <ul role="list">
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Mi Perfil</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Mis Favoritos</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="#" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+              </span>
+              <span class="sidebar__nav-label">Mis Compras</span>
+              <svg class="sidebar__nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </nav>
+
+    <!-- Filtros de categoría rápidos -->
+    <section class="sidebar__categories" aria-label="Filtrar por categoría">
+      <h3 class="sidebar__categories-title">Categorías</h3>
+      <div class="sidebar__category-tags" role="group" aria-label="Filtros de categoría">
+        <button class="sidebar__category-tag sidebar__category-tag--active" data-filter="all">Todas</button>
+        <button class="sidebar__category-tag" data-filter="finanzas">Finanzas</button>
+        <button class="sidebar__category-tag" data-filter="negocios">Negocios</button>
+        <button class="sidebar__category-tag" data-filter="ventas">Ventas</button>
+        <button class="sidebar__category-tag" data-filter="rrhh">RRHH</button>
+        <button class="sidebar__category-tag" data-filter="inventario">Inventario</button>
+      </div>
+    </section>
+
+    <!-- Footer del sidebar -->
+    <footer class="sidebar__footer">
+      <nav class="sidebar__social" aria-label="Redes sociales">
+        <a href="#" class="sidebar__social-link" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="3"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" class="sidebar__social-link" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="#" class="sidebar__social-link" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.78a4.85 4.85 0 01-1.02-.09z"/>
+          </svg>
+        </a>
+      </nav>
+      <p class="sidebar__footer-copyright">© 2025 ExcelPro Templates</p>
+    </footer>
+  </aside>
+
+  <!-- CARRITO LATERAL DERECHO-->
+  <aside
+    class="cart-sidebar"
+    id="js-cart-sidebar"
+    role="complementary"
+    aria-label="Carrito de compras"
+    aria-hidden="true"
+  >
+    <!-- Cabecera del carrito -->
+    <header class="cart-sidebar__header">
+      <div class="cart-sidebar__title-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <h2 class="cart-sidebar__title">Mi Carrito</h2>
+        <span class="cart-sidebar__count" id="js-cart-count" aria-live="polite">0</span>
+      </div>
+      <button class="cart-sidebar__close" id="js-cart-close" aria-label="Cerrar carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Promo strip -->
+    <div class="cart-sidebar__promo" aria-label="Envío gratis disponible">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+      <p class="cart-sidebar__promo-text">
+        ¡Descarga <strong>instantánea</strong> tras tu compra!
+      </p>
+    </div>
+
+    <!-- Cuerpo del carrito -->
+    <div class="cart-sidebar__body" id="js-cart-body" aria-live="polite" aria-label="Productos en el carrito">
+
+      <!-- Estado vacío (visible por defecto) -->
+      <div class="cart-sidebar__empty" id="js-cart-empty">
+        <div class="cart-sidebar__empty-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+        <h3 class="cart-sidebar__empty-title">Tu carrito está vacío</h3>
+        <p class="cart-sidebar__empty-text">Agrega plantillas para comenzar tu colección.</p>
+        <button class="cart-sidebar__explore-btn" id="js-cart-explore" aria-label="Explorar plantillas disponibles">
+          Explorar Plantillas
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Footer del carrito (oculto cuando está vacío) -->
+    <footer class="cart-sidebar__footer" id="js-cart-footer" hidden>
+
+      <!-- Resumen de precios -->
+      <div class="cart-sidebar__summary" aria-label="Resumen de precios">
+        <div class="cart-sidebar__summary-row">
+          <span>Subtotal</span>
+          <span id="js-cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-sidebar__summary-row cart-sidebar__summary-row--discount">
+          <span>Descuento (30%)</span>
+          <span id="js-cart-discount">-$0.00</span>
+        </div>
+        <div class="cart-sidebar__summary-row cart-sidebar__summary-row--total">
+          <span>Total</span>
+          <strong class="cart-sidebar__total-amount" id="js-cart-total">$0.00</strong>
+        </div>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="cart-sidebar__actions">
+        <button class="cart-sidebar__checkout-btn" aria-label="Proceder al pago">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          Proceder al Pago
+        </button>
+        <button class="cart-sidebar__continue-btn" id="js-cart-continue" aria-label="Continuar comprando">
+          Continuar Comprando
+        </button>
+      </div>
+
+      <!-- Métodos de pago -->
+      <div class="cart-sidebar__payment" aria-label="Métodos de pago aceptados">
+        <span class="cart-sidebar__payment-label">Aceptamos:</span>
+        <div class="cart-sidebar__payment-badges">
+          <span class="cart-sidebar__payment-badge">VISA</span>
+          <span class="cart-sidebar__payment-badge">MC</span>
+          <span class="cart-sidebar__payment-badge">PayPal</span>
+          <span class="cart-sidebar__payment-badge">Stripe</span>
+        </div>
+      </div>
+
+    </footer>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL-->
+  <main id="main-content" tabindex="-1">
+
+    <!-- HERO-->
+    <section class="hero" aria-label="Sección principal">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <span class="hero__eyebrow" aria-label="Nuevo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Nuevo: Templates IA 2025
+          </span>
+
+          <h1 class="hero__title">
+            Crea, Analiza y
+            <em class="hero__title-em">Triunfa</em>
+            <br />
+            con <span class="hero__title-highlight">Plantillas</span> de Excel
+          </h1>
+
+          <p class="hero__description">
+            Las mejores plantillas para optimizar tu trabajo y tu negocio. Diseñadas por expertos, listas para usar.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#products" class="hero__btn hero__btn--primary" aria-label="Ver todas las plantillas disponibles">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+              </svg>
+              Descúbrelas Ahora
+            </a>
+            <a href="#categories" class="hero__btn hero__btn--secondary" aria-label="Ver plantillas gratuitas">
+              Ver Gratis
+            </a>
+          </div>
+
+          <div class="hero__stats" aria-label="Estadísticas del sitio">
+            <div class="hero__stat">
+              <strong class="hero__stat-number">+2,500</strong>
+              <span class="hero__stat-label">Clientes</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="hero__stat-number">50+</strong>
+              <span class="hero__stat-label">Templates</span>
+            </div>
+            <div class="hero__stat">
+              <strong class="hero__stat-number">4.9★</strong>
+              <span class="hero__stat-label">Calificación</span>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero__image-wrapper">
+          <img
+            class="hero__image"
+            src="images/hero-bg.jpg"
+            alt="Mujer profesional trabajando con plantillas de Excel en su computadora"
+            width="520"
+            height="600"
+            loading="eager"
+          />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS-->
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+      <div class="categories__container">
+
+        <header class="categories__header">
+          <h2 class="categories__title" id="categories-title">Explora Nuestras Colecciones</h2>
+          <div class="categories__divider" aria-hidden="true">
+            <span class="categories__divider-dot"></span>
+          </div>
+        </header>
+
+        <div class="categories__grid">
+
+          <!-- Categoría: Plantillas Gratis -->
+          <article class="category-card" aria-label="Plantillas Gratis">
+            <figure class="category-card__image-wrapper">
+              <img
+                class="category-card__image"
+                src="images/plantillas-gratis.jpg"
+                alt="Plantillas de Excel gratuitas sobre un escritorio con flores"
+                width="600"
+                height="338"
+                loading="lazy"
+              />
+            </figure>
+            <div class="category-card__body">
+              <h3 class="category-card__title category-card__title--pink">Plantillas Gratis</h3>
+              <p class="category-card__description">
+                Descarga plantillas gratuitas para empezar a organizar tus finanzas y proyectos hoy mismo.
+              </p>
+              <a href="#products" class="category-card__link" aria-label="Ver todas las plantillas gratuitas">
+                Ver Plantillas
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Categoría: Súper Templates -->
+          <article class="category-card" aria-label="Súper Templates Premium">
+            <figure class="category-card__image-wrapper">
+              <img
+                class="category-card__image"
+                src="images/super-templates.jpg"
+                alt="Laptop mostrando un dashboard de Excel premium con gráficas coloridas"
+                width="600"
+                height="338"
+                loading="lazy"
+              />
+            </figure>
+            <div class="category-card__body">
+              <h3 class="category-card__title category-card__title--purple">Súper Templates</h3>
+              <p class="category-card__description">
+                Las mejores plantillas premium para destacar en tu trabajo y llevar tu negocio al siguiente nivel.
+              </p>
+              <a href="#products" class="category-card__link category-card__link--filled" aria-label="Ver todos los súper templates premium">
+                Ver Súper Templates
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS — LO MÁS POPULAR-->
+    <section class="products" id="products" aria-labelledby="products-title">
+      <div class="products__container">
+
+        <header class="products__header">
+          <h2 class="products__title" id="products-title">Lo Más Popular</h2>
+          <div class="products__divider" aria-hidden="true">
+            <span class="products__divider-dot"></span>
+          </div>
+        </header>
+
+        <!-- Filtros de categoría (Funcionalidad JS) -->
+        <div class="products__filters" role="group" aria-label="Filtrar productos por categoría">
+          <button class="products__filter-btn products__filter-btn--active" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="products__filter-btn" data-filter="finanzas" aria-pressed="false">Finanzas</button>
+          <button class="products__filter-btn" data-filter="negocios" aria-pressed="false">Negocios</button>
+          <button class="products__filter-btn" data-filter="ventas" aria-pressed="false">Ventas</button>
+          <button class="products__filter-btn" data-filter="rrhh" aria-pressed="false">RRHH</button>
+          <button class="products__filter-btn" data-filter="inventario" aria-pressed="false">Inventario</button>
+        </div>
+
+        <!-- Grid de productos -->
+        <div class="products__grid" id="js-products-grid" aria-live="polite" aria-label="Lista de plantillas">
+
+          <!-- Producto 1: Gestor de Finanzas Personales -->
+          <article
+            class="product-card"
+            data-category="finanzas"
+            data-id="1"
+            data-name="Gestor de Finanzas Personales"
+            data-price="29.99"
+            data-image="images/product-finanzas.jpg"
+            aria-label="Gestor de Finanzas Personales"
+          >
+            <span class="product-card__badge product-card__badge--popular" aria-label="Producto popular">Popular</span>
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Gestor de Finanzas Personales" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-finanzas.jpg"
+                alt="Plantilla Excel de Gestor de Finanzas Personales con gráficas y tablas"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Gestor de Finanzas Personales">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">Finanzas</p>
+              <h3 class="product-card__title">Gestor de Finanzas Personales</h3>
+              <div class="product-card__rating" aria-label="Calificación: 5 de 5 estrellas, 128 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                </div>
+                <span class="product-card__rating-count">(128)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$29.99</strong>
+                <span class="product-card__price-original">$42.99</span>
+                <span class="product-card__discount">-30%</span>
+              </div>
+              <!-- Botón Agregar al Carrito (Requisito 2 EBAC) -->
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Gestor de Finanzas Personales al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 2: Planificador de Negocios -->
+          <article
+            class="product-card"
+            data-category="negocios"
+            data-id="2"
+            data-name="Planificador de Negocios"
+            data-price="39.99"
+            data-image="images/product-negocios.jpg"
+            aria-label="Planificador de Negocios"
+          >
+            <span class="product-card__badge product-card__badge--new" aria-label="Producto nuevo">Nuevo</span>
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Planificador de Negocios" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-negocios.jpg"
+                alt="Plantilla Excel de Planificador de Negocios con proyecciones financieras"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Planificador de Negocios">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">Negocios</p>
+              <h3 class="product-card__title">Planificador de Negocios</h3>
+              <div class="product-card__rating" aria-label="Calificación: 4.5 de 5 estrellas, 94 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--half">★</span>
+                </div>
+                <span class="product-card__rating-count">(94)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$39.99</strong>
+                <span class="product-card__price-original">$57.99</span>
+                <span class="product-card__discount">-31%</span>
+              </div>
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Planificador de Negocios al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 3: Dashboard de Ventas -->
+          <article
+            class="product-card"
+            data-category="ventas"
+            data-id="3"
+            data-name="Dashboard de Ventas"
+            data-price="49.99"
+            data-image="images/product-ventas.jpg"
+            aria-label="Dashboard de Ventas"
+          >
+            <span class="product-card__badge product-card__badge--top" aria-label="Producto top ventas">Top</span>
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Dashboard de Ventas" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-ventas.jpg"
+                alt="Dashboard de Excel para análisis de ventas con KPIs y gráficas"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Dashboard de Ventas">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">Ventas</p>
+              <h3 class="product-card__title">Dashboard de Ventas</h3>
+              <div class="product-card__rating" aria-label="Calificación: 5 de 5 estrellas, 203 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                </div>
+                <span class="product-card__rating-count">(203)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$49.99</strong>
+                <span class="product-card__price-original">$71.99</span>
+                <span class="product-card__discount">-31%</span>
+              </div>
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Dashboard de Ventas al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 4: Control de Inventario -->
+          <article
+            class="product-card"
+            data-category="inventario"
+            data-id="4"
+            data-name="Control de Inventario Pro"
+            data-price="34.99"
+            data-image="images/product-inventario.jpg"
+            aria-label="Control de Inventario Pro"
+          >
+            <span class="product-card__badge product-card__badge--offer" aria-label="Oferta especial">Oferta</span>
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Control de Inventario Pro" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-inventario.jpg"
+                alt="Plantilla Excel de Control de Inventario con seguimiento de stock"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Control de Inventario Pro">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">Inventario</p>
+              <h3 class="product-card__title">Control de Inventario Pro</h3>
+              <div class="product-card__rating" aria-label="Calificación: 4 de 5 estrellas, 67 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star">★</span>
+                </div>
+                <span class="product-card__rating-count">(67)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$34.99</strong>
+                <span class="product-card__price-original">$49.99</span>
+                <span class="product-card__discount">-30%</span>
+              </div>
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Control de Inventario Pro al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 5: Presupuesto Anual -->
+          <article
+            class="product-card"
+            data-category="finanzas"
+            data-id="5"
+            data-name="Presupuesto Anual Empresarial"
+            data-price="44.99"
+            data-image="images/product-presupuesto.jpg"
+            aria-label="Presupuesto Anual Empresarial"
+          >
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Presupuesto Anual Empresarial" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-presupuesto.jpg"
+                alt="Plantilla Excel de Presupuesto Anual Empresarial con análisis de gastos"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Presupuesto Anual Empresarial">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">Finanzas</p>
+              <h3 class="product-card__title">Presupuesto Anual Empresarial</h3>
+              <div class="product-card__rating" aria-label="Calificación: 5 de 5 estrellas, 156 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                </div>
+                <span class="product-card__rating-count">(156)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$44.99</strong>
+                <span class="product-card__price-original">$64.99</span>
+                <span class="product-card__discount">-31%</span>
+              </div>
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Presupuesto Anual Empresarial al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 6: Gestión de RRHH -->
+          <article
+            class="product-card"
+            data-category="rrhh"
+            data-id="6"
+            data-name="Gestión de RRHH Completa"
+            data-price="54.99"
+            data-image="images/product-rrhh.jpg"
+            aria-label="Gestión de RRHH Completa"
+          >
+            <span class="product-card__badge product-card__badge--new" aria-label="Producto nuevo">Nuevo</span>
+            <button class="product-card__wishlist" aria-label="Agregar a favoritos: Gestión de RRHH Completa" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+            <figure class="product-card__image-wrapper">
+              <img
+                class="product-card__image"
+                src="images/product-rrhh.jpg"
+                alt="Plantilla Excel de Gestión de Recursos Humanos con nómina y evaluaciones"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <button class="product-card__preview-btn" aria-label="Ver preview de Gestión de RRHH Completa">
+                👁 Ver Preview
+              </button>
+            </figure>
+            <div class="product-card__body">
+              <p class="product-card__category">RRHH</p>
+              <h3 class="product-card__title">Gestión de RRHH Completa</h3>
+              <div class="product-card__rating" aria-label="Calificación: 4.5 de 5 estrellas, 82 reseñas">
+                <div class="product-card__stars" aria-hidden="true">
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--filled">★</span>
+                  <span class="product-card__star product-card__star--half">★</span>
+                </div>
+                <span class="product-card__rating-count">(82)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="product-card__price">$54.99</strong>
+                <span class="product-card__price-original">$79.99</span>
+                <span class="product-card__discount">-31%</span>
+              </div>
+              <button
+                class="product-card__add-btn"
+                aria-label="Agregar Gestión de RRHH Completa al carrito"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                Agregar al Carrito
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS-->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="testimonials__container">
+
+        <header class="testimonials__header">
+          <h2 class="testimonials__title" id="testimonials-title">Lo que dicen nuestros clientes</h2>
+          <div class="testimonials__divider" aria-hidden="true">
+            <span class="testimonials__divider-dot"></span>
+          </div>
+        </header>
+
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card" aria-label="Testimonio de María González">
+            <span class="testimonial-card__quote-icon" aria-hidden="true">"</span>
+            <blockquote class="testimonial-card__text">
+              <p>Las plantillas de ExcelPro transformaron completamente la gestión de mis finanzas. Ahora tengo claridad total sobre mis ingresos y gastos. ¡Increíble!</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--pink" aria-hidden="true">M</div>
+              <div class="testimonial-card__author-info">
+                <cite class="testimonial-card__author-name">María González</cite>
+                <p class="testimonial-card__author-role">Emprendedora Digital</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-label="Testimonio de Carlos Mendoza">
+            <span class="testimonial-card__quote-icon" aria-hidden="true">"</span>
+            <blockquote class="testimonial-card__text">
+              <p>El Dashboard de Ventas me ahorró horas de trabajo cada semana. Mis reportes ahora son automáticos y mis clientes quedan impresionados con la presentación.</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--green" aria-hidden="true">C</div>
+              <div class="testimonial-card__author-info">
+                <cite class="testimonial-card__author-name">Carlos Mendoza</cite>
+                <p class="testimonial-card__author-role">Gerente de Ventas</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-label="Testimonio de Ana Ramírez">
+            <span class="testimonial-card__quote-icon" aria-hidden="true">"</span>
+            <blockquote class="testimonial-card__text">
+              <p>Compré el pack de RRHH y fue la mejor inversión del año. La plantilla de nómina sola ya valió el precio completo. Totalmente recomendado.</p>
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--purple" aria-hidden="true">A</div>
+              <div class="testimonial-card__author-info">
+                <cite class="testimonial-card__author-name">Ana Ramírez</cite>
+                <p class="testimonial-card__author-role">Directora de RRHH</p>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--NEWSLETTER-->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="newsletter__container">
+        <div class="newsletter__content">
+
+          <div class="newsletter__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+
+          <h2 class="newsletter__title" id="newsletter-title">¡Únete a nuestra comunidad!</h2>
+          <p class="newsletter__description">
+            Recibe plantillas gratuitas, tutoriales exclusivos y descuentos especiales directamente en tu correo.
+          </p>
+
+          <form class="newsletter__form" id="js-newsletter-form" novalidate aria-label="Formulario de suscripción al newsletter">
+            <label for="js-newsletter-input" class="newsletter__label">
+              Correo electrónico
+            </label>
+            <div class="newsletter__input-group">
+              <input
+                class="newsletter__input"
+                type="email"
+                id="js-newsletter-input"
+                name="email"
+                placeholder="tu@correo.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+                aria-describedby="newsletter-disclaimer"
+              />
+              <button type="submit" class="newsletter__submit-btn" aria-label="Suscribirse al newsletter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Suscribirme Gratis
+              </button>
+            </div>
+            <p class="newsletter__disclaimer" id="newsletter-disclaimer">
+              Sin spam. Cancela cuando quieras. 🔒 Tus datos están seguros.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+
+      <div class="footer__grid">
+
+        <!-- Columna: Marca -->
+        <div class="footer__brand">
+          <a href="#" class="footer__brand-logo" aria-label="ExcelPro Templates — Inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+            ExcelPro Templates
+          </a>
+          <p class="footer__brand-description">
+            Las mejores plantillas de Excel para profesionales y emprendedores que quieren optimizar su trabajo.
+          </p>
+          <nav class="footer__social" aria-label="Redes sociales">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Columna: Plantillas -->
+        <nav class="footer__nav" aria-label="Plantillas">
+          <h3 class="footer__nav-title">Plantillas</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#" class="footer__nav-link">Finanzas Personales</a></li>
+            <li><a href="#" class="footer__nav-link">Negocios</a></li>
+            <li><a href="#" class="footer__nav-link">Ventas</a></li>
+            <li><a href="#" class="footer__nav-link">RRHH</a></li>
+            <li><a href="#" class="footer__nav-link">Inventario</a></li>
+          </ul>
+        </nav>
+
+        <!-- Columna: Recursos -->
+        <nav class="footer__nav" aria-label="Recursos">
+          <h3 class="footer__nav-title">Recursos</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#" class="footer__nav-link">Blog</a></li>
+            <li><a href="#" class="footer__nav-link">Tutoriales</a></li>
+            <li><a href="#" class="footer__nav-link">Webinars</a></li>
+            <li><a href="#" class="footer__nav-link">Mi Libro</a></li>
+            <li><a href="#" class="footer__nav-link">Comunidad</a></li>
+          </ul>
+        </nav>
+
+        <!-- Columna: Soporte -->
+        <nav class="footer__nav" aria-label="Soporte">
+          <h3 class="footer__nav-title">Soporte</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#" class="footer__nav-link">Centro de Ayuda</a></li>
+            <li><a href="#" class="footer__nav-link">Contacto</a></li>
+            <li><a href="#" class="footer__nav-link">Devoluciones</a></li>
+            <li><a href="#" class="footer__nav-link">Afiliados</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2025 ExcelPro Templates. Todos los derechos reservados.
+        </p>
+        <nav class="footer__legal" aria-label="Páginas legales">
+          <a href="#" class="footer__legal-link">Privacidad</a>
+          <a href="#" class="footer__legal-link">Términos</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL DE PREVIEW -->
+  <div
+    class="modal-overlay"
+    id="js-modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="js-modal-title"
+    aria-hidden="true"
+  >
+    <article class="modal" id="js-modal">
+      <header class="modal__header">
+        <h2 class="modal__title" id="js-modal-title">Preview del Producto</h2>
+        <button class="modal__close" id="js-modal-close" aria-label="Cerrar preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal__body">
+        <img class="modal__image" id="js-modal-image" src="" alt="" width="340" height="360" />
+        <div class="modal__info">
+          <p class="modal__category" id="js-modal-category"></p>
+          <h3 class="modal__product-title" id="js-modal-product-title"></h3>
+          <p class="modal__description" id="js-modal-description"></p>
+          <div class="modal__features">
+            <h4 class="modal__features-title">¿Qué incluye?</h4>
+            <ul class="modal__features-list" id="js-modal-features" role="list"></ul>
+          </div>
+          <div class="modal__pricing">
+            <strong class="modal__price" id="js-modal-price"></strong>
+            <span class="modal__price-original" id="js-modal-original-price"></span>
+          </div>
+          <div class="modal__actions">
+            <button class="modal__add-btn" id="js-modal-add-btn" aria-label="Agregar al carrito desde el preview">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+              Agregar al Carrito
+            </button>
+            <button class="modal__wishlist-btn" id="js-modal-wishlist-btn" aria-label="Agregar a favoritos desde el preview" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!--TOAST NOTIFICATIONS-->
+  <div class="toast-container" id="js-toast-container" aria-live="polite" aria-label="Notificaciones"></div>
+
+  <!-- BOTÓN BACK TO TOP-->
+  <button
+    class="back-to-top"
+    id="js-back-to-top"
+    aria-label="Volver al inicio de la página"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- JavaScript principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
